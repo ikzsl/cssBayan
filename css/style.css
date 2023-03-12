@@ -1,0 +1,106 @@
+
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+  --red: #ff0000;
+}
+
+@font-face {
+  font-family: "BebasNeue-Regular";
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/BebasNeue-Regular.woff2") format("woff2"), url("../fonts/BebasNeue-Regular.woff") format("woff");
+}
+
+* {
+  font-family: "BebasNeue-Regular";
+}
+
+
+
+
+.container {
+  margin: 0 auto;
+  width: 500px;
+  transition: 0.35s;
+}
+.container .body {
+  margin: 0 auto;
+  height: 0;
+  color: rgba(0, 0, 0, 0);
+  line-height: 18px;
+  padding: 0 30px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  overflow: hidden;
+  font-size: 1rem;
+}
+.container .body p {
+  margin: 0 0 10px;
+}
+.container label {
+  cursor: pointer;
+  /* background-color: #ffffffcc; */
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  width: 100%;
+  color: #979a9c;
+  font-weight: 300;
+  box-sizing: border-box;
+  z-index: 100;
+  font-size: 18px;
+  margin: 0 0 5px;
+  transition: color 0.35s;
+}
+.container label:hover {
+  color: #fff;
+  background-color: #383333cc;
+}
+.container input {
+  display: none;
+}
+
+.container input:checked + label {
+  color: #979a9c;
+}
+
+.container input:checked + label:hover {
+  color: #fff;
+}
+
+.container input:checked + label + .body {
+  height: auto;
+  margin-top: -5px;
+  color: #000;
+  padding: 20px 30px 10px;
+  border-bottom: solid 2px var(--red);
+}
+.container input:hover + label + .body {
+  height: auto;
+  margin-top: -5px;
+  color: #000;
+  padding: 20px 30px 10px;
+}
+
+.container label:hover .button {
+  transform: rotate(45deg);
+}
+.container .button {
+  width: 20px;
+
+}
+
+
+@media (max-width: 820px) {
+  .container {
+    padding: 170px 0 60px;
+    margin-bottom: 170px;
+  }
+}
+
+@media (max-width: 320px) {
+  h1 {
+    color: yellow;
+  }
+}
